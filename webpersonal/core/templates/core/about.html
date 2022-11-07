@@ -1,7 +1,22 @@
 <!--Herencia de template-->
 {%extends 'core/base.html'%}
 {%block title%}Acerca de{%endblock%}
+
+{%block background%}{%load static%}{% static 'core/img/about-bg.jpg' %}{%endblock%}
+
+{%block headers%}
+<h1>Acerca de mi</h1>
+    <span class="subheading">Información personal</span>
+{%endblock%}
+
 {%block content%}
-<h2>Acerca de mi</h2>
-<p>Soy estudiante de desarrollo</p>
+<div class="col-lg-3 col-md-4 offset-lg-1">
+    <img class="img-fluid avatar" src="{% static 'core/img/avatar.jpg' %}" alt="avatar">
+</div>
+<div class="col-lg-7 col-md-8">
+    <h2 class="section-heading">Joao Jaramillo</h2>   
+        <p>Nacido en Quito, estudiante de cuarto semestre de Desarrollo de 
+            Software en el Instituto Técnico Superior Quito Metropolitano.</p>
+        <p>Actualmente trabajo en PROVEFARMA como operador de sistemas.</p>
+</div>
 {%endblock%}
