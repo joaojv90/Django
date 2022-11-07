@@ -53,14 +53,14 @@
     </nav>
 
     <!-- Cabecera -->
-    <header class="masthead" style="background-image: url('{% static 'core/img/home-bg.jpg' %}')">
+    <header class="masthead" style="background-image: url('{%block background%}{%endblock%}')"> <!--Para hacer el contenido dinámico-->
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="site-heading">
-                        <h1>Joao Jaramillo</h1>
-                        <span class="subheading">Estudiante de Desarrollo de Software</span>
+                        <!--Para que cambie el titulo u subtitulo-->
+                        {%block headers%}{%endblock%}
                     </div>
                 </div>
             </div>
@@ -68,8 +68,11 @@
     </header>
 
     <!-- Contenido -->
-
-    {%block content%}{%endblock%}
+    <div class="container">
+        <div class="row">
+            {%block content%}{%endblock%}
+        </div>
+    </div>
 
     <!-- Pié de página -->
     <footer>
