@@ -12,6 +12,7 @@ class Project(models.Model):
     created = models.DateTimeField(auto_now_add=True, verbose_name='Fecha de creación')
     # captura la fecha cuando se ejecuta algún cambio
     updated = models.DateTimeField(auto_now=True, verbose_name='Fecha de actualización')
+    link = models.URLField(verbose_name='Enlace de proyecto',null=True, blank=True)
 
 # Subclase
     class Meta:
