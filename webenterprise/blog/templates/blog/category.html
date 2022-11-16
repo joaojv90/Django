@@ -1,11 +1,11 @@
 {% extends 'core/base.html' %}
 {% load static %}
 
-{% block title %}Blog{% endblock %}
+{% block title %}Categorias{% endblock %}
 
 {% block content %}
 
-{% for entry in blog %}
+{% for entry in category.getBlogs.all %}
 
     <section class="page-section cta">
       <div class="container">

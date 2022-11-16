@@ -23,7 +23,8 @@ class Blog(models.Model):
     content = models.TextField(verbose_name='Contenido')
     published = models.DateTimeField(verbose_name='Fecha de publicación',default=now)
     author = models.ForeignKey(User,verbose_name='Autor',on_delete=models.CASCADE)
-    categories = models.ManyToManyField(Category, verbose_name='Categorías')
+    categories = models.ManyToManyField(
+        Category, verbose_name='Categorías',related_name='getBlogs')
     created = models.DateTimeField(
         auto_now_add=True, verbose_name='Fecha de Creación')
     updated = models.DateTimeField(
