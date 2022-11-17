@@ -14,7 +14,11 @@
                   <span class="section-heading-lower">{{page.title}}</span>
                 </h2>
                 <div class="section-content">
-                    <p>{{page.content|linebreaks}}</p>
+                    <p>{{page.content|safe}}</p>
+                    <!-- para validar que usuario está autentificado -->
+                    {% if user.is_authenticated  %}
+                    <p><a href='{% url 'admin:page_page_change' page.id %}' >Editar</a></p>
+                    {% endif %}
                 </div>
               </div>
             </div>
