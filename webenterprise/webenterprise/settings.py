@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'social',
     'page',
     'ckeditor', # Brinda las opciones de una barra de edición de texto
+    'contact',
 ]
 
 MIDDLEWARE = [
@@ -146,3 +147,9 @@ CKEDITOR_CONFIGS = {
         ]
     }
 }
+
+# Config de MailTrap
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = '5906128dac835d'
+EMAIL_HOST_PASSWORD = '5b4bfe049318a3'
+EMAIL_PORT = '2525'
